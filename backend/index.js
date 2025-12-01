@@ -42,17 +42,9 @@ mongoose
     .connect(MONGO_URI)
     .then(() => {
         console.log("Connected to MongoDB");
-        if (process.env.BUILD_MODE === "pro") {
-            app.listen(process.env.PORT, () => {
-                // eslint-disable-next-line no-console
-                console.log(`Server started successfully!!`);
-            });
-        } else {
-            app.listen(port, hostname, () => {
-                // eslint-disable-next-line no-console
-                console.log(`Server started at http://${hostname}:${port}/`);
-            });
-        }
+        app.listen(PORT, () => {
+            console.log(`Server started at http://localhost:${PORT}/`);
+        });
     })
     .catch((err) => {
         console.error("MongoDB connection error:", err);

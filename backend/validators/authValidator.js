@@ -2,12 +2,11 @@ const { body } = require("express-validator");
 
 exports.registerValidator = [
     body("name").trim().notEmpty().withMessage("Name is required"),
-    body("email")
+    body("username")
         .trim()
         .notEmpty()
-        .withMessage("Email is required")
-        .isEmail()
-        .withMessage("Email must be valid"),
+        .withMessage("username is required")
+        .withMessage("username must be valid"),
     body("password")
         .notEmpty()
         .withMessage("Password is required")
@@ -16,12 +15,11 @@ exports.registerValidator = [
 ];
 
 exports.loginValidator = [
-    body("email")
+    body("username")
         .trim()
         .notEmpty()
-        .withMessage("Email is required")
-        .isEmail()
-        .withMessage("Email must be valid"),
+        .withMessage("username is required")
+        .withMessage("username must be valid"),
     body("password").notEmpty().withMessage("Password is required"),
 ];
 

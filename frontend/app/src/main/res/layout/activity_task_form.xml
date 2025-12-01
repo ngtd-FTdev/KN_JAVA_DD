@@ -4,66 +4,56 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="24dp"
-    android:gravity="center"
     android:background="@color/white">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/login"
-        android:textSize="28sp"
+        android:text="@string/task_form"
+        android:textSize="24sp"
         android:textStyle="bold"
-        android:layout_marginBottom="32dp" />
+        android:layout_marginBottom="24dp" />
 
     <EditText
-        android:id="@+id/username_input"
+        android:id="@+id/title_input"
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:hint="@string/username"
+        android:hint="@string/task_title"
         android:inputType="text"
         android:padding="12dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/edit_text_background" />
 
     <EditText
-        android:id="@+id/password_input"
+        android:id="@+id/description_input"
         android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:hint="@string/password"
-        android:inputType="textPassword"
+        android:layout_height="150dp"
+        android:hint="@string/task_description"
+        android:inputType="text"
+        android:gravity="top"
         android:padding="12dp"
         android:layout_marginBottom="32dp"
         android:background="@drawable/edit_text_background" />
 
-    <Button
-        android:id="@+id/login_btn"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:text="@string/login"
-        android:textSize="16sp"
-        android:textStyle="bold" />
-
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="24dp">
+        android:gravity="end">
 
-        <TextView
+        <Button
+            android:id="@+id/cancel_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/dont_have_account" />
+            android:text="@string/cancel"
+            android:layout_marginEnd="8dp" />
 
-        <TextView
-            android:id="@+id/register_link"
+        <Button
+            android:id="@+id/save_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/register"
-            android:textColor="@android:color/holo_blue_light"
-            android:textStyle="bold"
-            android:layout_marginStart="4dp"
-            android:clickable="true"
-            android:focusable="true" />
+            android:text="@string/save" />
+
     </LinearLayout>
 
 </LinearLayout>

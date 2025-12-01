@@ -1,6 +1,25 @@
 <resources>
     <string name="app_name">TodoApp</string>
+    <string name="app_subtitle">Manage your tasks</string>
+
+    <!-- Authentication -->
     <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="logout">Logout</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="already_have_account">Already have account? </string>
+    <string name="dont_have_account">Don\'t have account? </string>
+
+    <!-- Tasks -->
+    <string name="tasks">My Tasks</string>
+    <string name="task_form">Task Form</string>
+    <string name="task_title">Task Title</string>
+    <string name="task_description">Description</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+
 </resources>

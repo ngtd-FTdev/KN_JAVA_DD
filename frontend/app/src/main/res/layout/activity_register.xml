@@ -10,7 +10,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/login"
+        android:text="@string/register"
         android:textSize="28sp"
         android:textStyle="bold"
         android:layout_marginBottom="32dp" />
@@ -32,14 +32,24 @@
         android:hint="@string/password"
         android:inputType="textPassword"
         android:padding="12dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/edit_text_background" />
+
+    <EditText
+        android:id="@+id/confirm_password_input"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="@string/confirm_password"
+        android:inputType="textPassword"
+        android:padding="12dp"
         android:layout_marginBottom="32dp"
         android:background="@drawable/edit_text_background" />
 
     <Button
-        android:id="@+id/login_btn"
+        android:id="@+id/register_btn"
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:text="@string/login"
+        android:text="@string/register"
         android:textSize="16sp"
         android:textStyle="bold" />
 
@@ -52,13 +62,13 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/dont_have_account" />
+            android:text="@string/already_have_account" />
 
         <TextView
-            android:id="@+id/register_link"
+            android:id="@+id/login_link"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/register"
+            android:text="@string/login"
             android:textColor="@android:color/holo_blue_light"
             android:textStyle="bold"
             android:layout_marginStart="4dp"
