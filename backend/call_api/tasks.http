@@ -1,0 +1,38 @@
+@host = http://localhost:3000
+
+# Replace <TOKEN> with the JWT from `auth.http` login response.
+
+### List tasks (paginated)
+GET {{host}}/api/tasks
+Authorization: Bearer <TOKEN>
+
+### Create a task
+POST {{host}}/api/tasks
+Content-Type: application/json
+Authorization: Bearer <TOKEN>
+
+{
+  "title": "Buy milk",
+  "description": "From the supermarket"
+}
+
+### Get a single task (replace :id)
+GET {{host}}/api/tasks/:id
+Authorization: Bearer <TOKEN>
+
+### Update a task (replace :id)
+PUT {{host}}/api/tasks/:id
+Content-Type: application/json
+Authorization: Bearer <TOKEN>
+
+{
+  "completed": true
+}
+
+### Delete a task (replace :id)
+DELETE {{host}}/api/tasks/:id
+Authorization: Bearer <TOKEN>
+
+# Tips:
+# - When using VS Code REST Client: after login, copy the `token` value and paste into `Authorization` header as `Bearer <token>`.
+# - Use query params like `?page=1&limit=10&q=search&completed=true&sort=-createdAt` for listing.

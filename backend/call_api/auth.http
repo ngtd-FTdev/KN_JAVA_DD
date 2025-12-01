@@ -1,0 +1,42 @@
+@host = http://localhost:3000
+
+### Health check
+GET {{host}}/api/health
+
+### Register (create a new user)
+POST {{host}}/api/auth/register
+Content-Type: application/json
+
+{
+  "username": "testuser",
+  "password": "password123"
+}
+
+### Login (get JWT token)
+POST {{host}}/api/auth/login
+Content-Type: application/json
+
+{
+  "username": "testuser",
+  "password": "password123"
+}
+
+# Notes:
+# - Copy the `token` from the login response and use it in the `Authorization` header for protected endpoints.
+# - Default server port is 3000 (change `@host` if your dev server uses another port).
+
+### Refresh token (exchange refreshToken for a new pair)
+POST {{host}}/api/auth/refresh
+Content-Type: application/json
+
+{
+  "refreshToken": "<paste-refresh-token-here>"
+}
+
+### Logout (revoke refresh token)
+POST {{host}}/api/auth/logout
+Content-Type: application/json
+
+{
+  "refreshToken": "<paste-refresh-token-here>"
+}
