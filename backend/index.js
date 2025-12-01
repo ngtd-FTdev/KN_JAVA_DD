@@ -42,7 +42,7 @@ mongoose
     .connect(MONGO_URI)
     .then(() => {
         console.log("Connected to MongoDB");
-        if (env.BUILD_MODE === "pro") {
+        if (process.env.BUILD_MODE === "pro") {
             app.listen(process.env.PORT, () => {
                 // eslint-disable-next-line no-console
                 console.log(`Server started successfully!!`);
